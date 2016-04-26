@@ -15,7 +15,7 @@ function! s:cursor.draw() dict
 
   let lines = repeat([repeat(' ', l:winWidth)], l:winHeight)
   for i in range(l:h)
-    let lines[self.y + i] = repeat(' ', l:x).repeat('#', l:w * 2)
+    let lines[l.y + i] = repeat(' ', l:x).repeat('#', l:w * 2)
   endfor
   call setline(1, lines)
   redraw
